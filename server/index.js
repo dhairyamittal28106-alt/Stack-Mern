@@ -9,12 +9,12 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
-// ---------------------------------------------------------
-// ☁️ CLOUD DB CONNECTION
-// I fixed the '@' symbol in your password to '%40' so it works.
-// I also added '/contact_app' so it creates the folder correctly.
+
+
+
+
 const dbURI = "mongodb+srv://admin:Shyambaba1%40@cluster0.j8epmd0.mongodb.net/contact_app?appName=Cluster0";
-// ---------------------------------------------------------
+
 
 mongoose.connect(dbURI)
     .then(() => console.log("✅ Connected to Cloud MongoDB"))

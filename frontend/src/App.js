@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-// ☁️ LIVE API URL (From Render)
+
 const API_BASE = "https://contact-app-backend-z5q3.onrender.com/api/contacts";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 
   const getContacts = async () => {
     try {
-      // Updated to use the variable
+      
       const response = await fetch(API_BASE);
       const data = await response.json();
       setContacts(data);
@@ -56,7 +56,7 @@ function App() {
   const deleteContact = async (id) => {
     if (window.confirm("Delete this contact?")) {
       try {
-        // Updated to use the variable + ID
+        
         await fetch(`${API_BASE}/${id}`, {
           method: 'DELETE'
         });
